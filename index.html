@@ -4,37 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Store</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" async></script>
   </head>
   <body>
-    <header>
-      <h1>Tech Store</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Gallary</a>
-        <a href="#">Cart (<span id="cartCounter">0</span>)</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-    <div class="container">
+    <div class="wrapper">
+      <header>
+        <h1>Tech Store</h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">Gallary</a>
+          <a href="#">Cart (<span id="cartCounter">0</span>)</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+      <div class="container">
       <div id="home" class="section">
         <h1>Welcome Tech Store</h1>
         <p>Discover Top Technologies with us.</p>
-        <div class="featuredProduct">
-            <img src="" alt="">
+        <div class="featured-product product-cart">
+          <img src="./images/image6.webp" alt="" />
+          <h3>Galaxy S24 Ultra</h3>
+          <p>Price: $<span class="price">999</span></p>
+          <button class="btn">Add to Cart</button>
         </div>
       </div>
-      <div id="products" class="section"></div>
+      <div id="products" class="section">
+        <div class="featured-product product-cart">
+            <img src="./images/image2.webp" alt="" />
+            <h3>Earbuds Pro</h3>
+            <p>Price: $<span class="price">99</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="featured-product product-cart">
+            <img src="./images/image6.webp" alt="" />
+            <h3>Galaxy S24 Ultra</h3>
+            <p>Price: $<span class="price">999</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="featured-product product-cart">
+            <img src="./images/image7.webp" alt="" />
+            <h3>Smart Watch Pro</h3>
+            <p>Price: $<span class="price">299</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+      </div>
       <div id="gallary" class="section"></div>
       <div id="cart" class="section"></div>
       <div id="about" class="section"></div>
       <div id="contact" class="section"></div>
     </div>
-    <footer>
-        &copy; 2024 Tech Store. All rights reserved. By <a href="https://github.com/safidrawan">M.Rafi Safidrawan</a>
-    </footer>
+
+      <footer>
+        &copy; 2024 Tech Store. All rights reserved. By
+        <a href="https://github.com/safidrawan">M.Rafi Safidrawan</a>
+      </footer>
+    </div>
   </body>
 </html>
