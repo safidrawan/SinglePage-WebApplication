@@ -147,7 +147,7 @@ class Cart {
     totalElement.innerHTML = `
           <h2>Total: $${this.calculateTotal()}</h2>
           <button class="btn checkout-btn" onclick="cart.checkout()">Proceed to Checkout</button>
-          <a href="#" class="btn" onclick="showSection('products','proLink')">Continue Shopping</a>
+          <button class="btn" onclick="showSection('products','proLink')">Continue Shopping</button>
           
       `;
     cartSection.appendChild(totalElement);
