@@ -81,7 +81,11 @@ class Cart {
     this.items = this.items.filter((item) => item.product.id !== productId);
     this.updateCartView();
   }
-
+  checkout(){
+    this.items = [];
+    alert('Thank you for your purchase.');
+    this.updateCartView();
+  }
   updateQuantity(productId, quantity) {
     const cartItem = this.items.find((item) => item.product.id === productId);
     if (cartItem) {
@@ -142,7 +146,7 @@ class Cart {
     totalElement.classList.add("cart-total");
     totalElement.innerHTML = `
           <h2>Total: $${this.calculateTotal()}</h2>
-          <button class="btn checkout-btn">Proceed to Checkout</button>
+          <button class="btn checkout-btn" onclick="cart.checkout()">Proceed to Checkout</button>
           <a href="#" class="btn" onclick="showSection('products','proLink')">Continue Shopping</a>
           
       `;
@@ -173,7 +177,16 @@ function setupProductEventListeners() {
       showSection("cart", "cartLink");
     });
   });
+
+  const images = document.querySelectorAll('#gallery img');
+  
+  images.forEach(image => {
+    image.addEventListener('click', () => {
+      showSection('products','proLink');
+    });
+  });
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   setupProductEventListeners();
