@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Store</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./script.js" async></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Tech Store</h1>
-        <nav>
-          <a href="#" id="homeLink" class="navLink current" onclick="showSection('home' ,'homeLink')">Home <span id="sym"><span>^</span></span></a>
-          <a href="#" id="proLink" class="navLink " onclick="showSection('products','proLink')">Products</a>
-          <a href="#" id="galLink" class="navLink " onclick="showSection('gallary','galLink')">Gallary</a>
-          <a href="#" id="cartLink" class="navLink " onclick="showSection('cart','cartLink')"
-            >Cart (<span id="cartCounter">0</span>)</a
-          >
-          <a href="#" id="aboutLink" class="navLink " onclick="showSection('about','aboutLink')">About</a>
-          <a href="#" id="conLink" class="navLink " onclick="showSection('contact','conLink')">Contact</a>
-        </nav>
-      </header>
-      <div class="container">
-        <div id="home" class="section active">
-          <h1>Welcome Tech Store</h1>
-          <p>Discover Top Technologies with us.</p>
-          <h2>Featured Product</h2>
-          <div class="featured-product product-cart">
-            <img src="./images/image6.webp" alt="" />
-            <h3>Galaxy S24 Ultra</h3>
-            <p>Price: $<span class="price">999</span></p>
-            <button class="btn">Add to Cart</button>
-          </div>
-        </div>
-        <div id="products" class="section hidden">
-          <div class="product-cart">
-            <img src="./images/image2.webp" alt="" />
-            <h3>Earbuds Pro</h3>
-            <p>Price: $<span class="price">99</span></p>
-            <button class="btn">Add to Cart</button>
-          </div>
-          <div class="product-cart">
-            <img src="./images/image6.webp" alt="" />
-            <h3>Galaxy S24 Ultra</h3>
-            <p>Price: $<span class="price">999</span></p>
-            <button class="btn">Add to Cart</button>
-          </div>
-          <div class="product-cart">
-            <img src="./images/image7.webp" alt="" />
-            <h3>Smart Watch Pro</h3>
-            <p>Price: $<span class="price">299</span></p>
-            <button class="btn">Add to Cart</button>
-          </div>
-        </div>
-        <div id="gallary" class="section hidden">
-          <img src="./images/image1.webp" alt="image1" />
-          <img src="./images/image2.webp" alt="image2" />
-          <img src="./images/image3.webp" alt="image3" />
-          <img src="./images/image4.webp" alt="image4" />
-          <img src="./images/image5.webp" alt="image5" />
-          <img src="./images/image6.webp" alt="image6" />
-          <img src="./images/image7.webp" alt="image7" />
-          <img src="./images/image8.webp" alt="image8" />
-          <img src="./images/image9.webp" alt="image9" />
-        </div>
-        <div id="cart" class="section hidden">
-          <h1>Cart</h1>
-          <p>Your cart is empty.</p>
-          <a href="#" class="btn" onclick="showSection('products')"> Back to Products page</a>
-        </div>
-        <div id="about" class="section hidden">
-          <h1>About Tech Store</h1>
-          <p>
-            Tech Store is your one-stop shop for all things tech. Founded in
-            2024, we've been at the forefront of bringing the latest gadgets to
-            tech enthusiasts.
-          </p>
-          <h2>Our Mission</h2>
-          <p>
-            To provide high-quality, innovative tech products at competitive
-            prices, coupled with exceptional customer service.
-          </p>
-          <ul>
-            <li><b>Store name:</b> Tech Store</li>
-            <li><b>Company Name:</b> Top Tech ltd</li>
-            <li><b>Address: </b>123 Tech Street, Herat City</li>
-            <li>
-              <b>Email:</b>
-              <a href="mailto:support@techstore.com">support@techstore.com</a>
-            </li>
-            <li><b>Phone:</b> <a href="tel:0093799111000">0093799111000</a></li>
-          </ul>
-        </div>
-        <div id="contact" class="section hidden">
-          <h1>Contact Us</h1>
-          <p>Get in touch with us for any queries or support.</p>
-          <ul>
-            <li><b>Store name:</b> Tech Store</li>
-            <li><b>Company Name:</b> Top Tech ltd</li>
-            <li><b>Address: </b>123 Tech Street, Herat City</li>
-            <li>
-              <b>Email:</b>
-              <a href="mailto:support@techstore.com">support@techstore.com</a>
-            </li>
-            <li><b>Phone:</b> <a href="tel:0093799111000">0093799111000</a></li>
-          </ul>
-          <div id="alert"></div>
-          <h2>Send us a message</h2>
-          <form onsubmit="event.preventDefault(); sendMessage();">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" required />
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" required />
-            <label for="message">Message:</label>
-            <textarea id="message" required></textarea>
-            <button class="btn" type="submit">Send Message</button>
-          </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Store</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Tech Store</h1>
+      <nav>
+        <a href="#" id="homeLink" class="navLink current" onclick="showSection('home' ,'homeLink')">Home <span
+            id="sym"><span>^</span></span></a>
+        <a href="#" id="proLink" class="navLink" onclick="showSection('products','proLink')">Products</a>
+        <a href="#" id="galLink" class="navLink" onclick="showSection('gallary','galLink')">Gallary</a>
+        <a href="#" id="cartLink" class="navLink" onclick="showSection('cart','cartLink')">Cart (<span
+            id="cartCounter">0</span>)</a>
+        <a href="#" id="aboutLink" class="navLink" onclick="showSection('about','aboutLink')">About</a>
+        <a href="#" id="conLink" class="navLink" onclick="showSection('contact','conLink')">Contact</a>
+      </nav>
+    </header>
+    <div class="container">
+      <div id="home" class="section active">
+        <h1>Welcome Tech Store</h1>
+        <p>Discover Top Technologies with us.</p>
+        <h2>Featured Product</h2>
+        <div class="featured-product product-cart">
+          <img src="./images/image6.webp" alt="" />
+          <h3>Galaxy S24 Ultra</h3>
+          <p>Price: $<span class="price">999</span></p>
+          <button class="btn">Add to Cart</button>
         </div>
       </div>
-
-      <footer>
-        &copy; 2024 Tech Store. All rights reserved. By &nbsp;
-        <a href="https://github.com/safidrawan">M.Rafi Safidrawan</a>
-      </footer>
+      <div id="products" class="section hidden">
+        <div class="product-cart">
+          <img src="./images/image2.webp" alt="" />
+          <h3>Earbuds Pro</h3>
+          <p>Price: $<span class="price">99</span></p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product-cart">
+          <img src="./images/image6.webp" alt="" />
+          <h3>Galaxy S24 Ultra</h3>
+          <p>Price: $<span class="price">999</span></p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product-cart">
+          <img src="./images/image7.webp" alt="" />
+          <h3>Smart Watch Pro</h3>
+          <p>Price: $<span class="price">299</span></p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+      <div id="gallary" class="section hidden">
+        <img src="./images/image1.webp" alt="image1" />
+        <img src="./images/image2.webp" alt="image2" />
+        <img src="./images/image3.webp" alt="image3" />
+        <img src="./images/image4.webp" alt="image4" />
+        <img src="./images/image5.webp" alt="image5" />
+        <img src="./images/image6.webp" alt="image6" />
+        <img src="./images/image7.webp" alt="image7" />
+        <img src="./images/image8.webp" alt="image8" />
+        <img src="./images/image9.webp" alt="image9" />
+      </div>
+      <div id="cart" class="section hidden">        
+      </div>
+      <div id="about" class="section hidden">
+        <h1>About Tech Store</h1>
+        <p>
+          Tech Store is your one-stop shop for all things tech. Founded in
+          2024, we've been at the forefront of bringing the latest gadgets to
+          tech enthusiasts.
+        </p>
+        <h2>Our Mission</h2>
+        <p>
+          To provide high-quality, innovative tech products at competitive
+          prices, coupled with exceptional customer service.
+        </p>
+        <ul>
+          <li><b>Store name:</b> Tech Store</li>
+          <li><b>Company Name:</b> Top Tech ltd</li>
+          <li><b>Address: </b>123 Tech Street, Herat City</li>
+          <li>
+            <b>Email:</b>
+            <a href="mailto:support@techstore.com">support@techstore.com</a>
+          </li>
+          <li><b>Phone:</b> <a href="tel:0093799111000">0093799111000</a></li>
+        </ul>
+      </div>
+      <div id="contact" class="section hidden">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for any queries or support.</p>
+        <ul>
+          <li><b>Store name:</b> Tech Store</li>
+          <li><b>Company Name:</b> Top Tech ltd</li>
+          <li><b>Address: </b>123 Tech Street, Herat City</li>
+          <li>
+            <b>Email:</b>
+            <a href="mailto:support@techstore.com">support@techstore.com</a>
+          </li>
+          <li><b>Phone:</b> <a href="tel:0093799111000">0093799111000</a></li>
+        </ul>
+        <div id="alert"></div>
+        <h2>Send us a message</h2>
+        <form onsubmit="event.preventDefault(); sendMessage();">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" required />
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
     </div>
-  </body>
+
+    <footer>
+      &copy; 2024 Tech Store. All rights reserved. By &nbsp;
+      <a href="https://github.com/safidrawan">M.Rafi Safidrawan</a>
+    </footer>
+  </div>
+</body>
+
 </html>
