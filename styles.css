@@ -1,26 +1,30 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-  /* height: 100vh; */
+  min-height: 100svh;
   background-color: #f4f4f4;
   position: relative;
 }
-.wrapper{
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
 }
 header {
-  height: 10vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+
+  h1{
+    padding: 20px;
+  }
 
   nav {
     background-color: #333;
@@ -36,52 +40,70 @@ header {
     }
   }
 }
-.container{
-    max-width: 1200px;
-    overflow: hidden;
-}
 
-.section{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    ;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: baseline;
 }
-.product-cart{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    gap: 10px;
-    margin: 30px;
+.product-cart {
+  width: 300px;
+  background-color: #fff;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+  margin: 30px;
+  box-shadow: 0 0 10px #ccc;
 }
-img{
-    width: 100%;
-    border-radius: 5px;
+img {
+  width: 100%;
+  border-radius: 5px;
 }
-.btn{
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-}
-#products{
-    display: flex;
-    ;
-}
-footer {
-  /* position: absolute; */
-  /* bottom: 0; */
-  height: 5vh;
+.btn {
   background-color: #333;
   color: #fff;
-  width: 100%+;
+  padding: 20px;
+}
+#products {
+  display: flex;
+}
+
+#gallary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  img {
+    width: calc(33.33% - 10px);
+    max-width: 300px;
+    border: 2px solid #333;
+  }
+  flex-direction: row;
+}
+footer {
+  padding: 30px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
   font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  a{
+  a {
     color: #fff;
   }
+}
+
+.hidden {
+  display: none !important;
+}
+.active {
+  display: flex !important;
 }

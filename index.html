@@ -12,50 +12,90 @@
       <header>
         <h1>Tech Store</h1>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">Products</a>
-          <a href="#">Gallary</a>
-          <a href="#">Cart (<span id="cartCounter">0</span>)</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="#" onclick="showSection('home')">Home</a>
+          <a href="#" onclick="showSection('products')">Products</a>
+          <a href="#" onclick="showSection('gallary')">Gallary</a>
+          <a href="#" onclick="showSection('cart')">Cart (<span id="cartCounter">0</span>)</a>
+          <a href="#" onclick="showSection('about')">About</a>
+          <a href="#" onclick="showSection('contact')">Contact</a>
         </nav>
       </header>
       <div class="container">
-      <div id="home" class="section">
-        <h1>Welcome Tech Store</h1>
-        <p>Discover Top Technologies with us.</p>
-        <div class="featured-product product-cart">
-          <img src="./images/image6.webp" alt="" />
-          <h3>Galaxy S24 Ultra</h3>
-          <p>Price: $<span class="price">999</span></p>
-          <button class="btn">Add to Cart</button>
-        </div>
-      </div>
-      <div id="products" class="section">
-        <div class="featured-product product-cart">
-            <img src="./images/image2.webp" alt="" />
-            <h3>Earbuds Pro</h3>
-            <p>Price: $<span class="price">99</span></p>
-            <button class="btn">Add to Cart</button>
-          </div>
+        <div id="home" class="section active" >
+          <h1>Welcome Tech Store</h1>
+          <p>Discover Top Technologies with us.</p>
           <div class="featured-product product-cart">
             <img src="./images/image6.webp" alt="" />
             <h3>Galaxy S24 Ultra</h3>
             <p>Price: $<span class="price">999</span></p>
             <button class="btn">Add to Cart</button>
           </div>
-          <div class="featured-product product-cart">
+        </div>
+        <div id="products" class="section hidden" >
+          <div class="product-cart">
+            <img src="./images/image2.webp" alt="" />
+            <h3>Earbuds Pro</h3>
+            <p>Price: $<span class="price">99</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product-cart">
+            <img src="./images/image6.webp" alt="" />
+            <h3>Galaxy S24 Ultra</h3>
+            <p>Price: $<span class="price">999</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product-cart">
             <img src="./images/image7.webp" alt="" />
             <h3>Smart Watch Pro</h3>
             <p>Price: $<span class="price">299</span></p>
             <button class="btn">Add to Cart</button>
           </div>
+        </div>
+        <div id="gallary" class="section hidden" >
+          <img src="./images/image1.webp" alt="image1" />
+          <img src="./images/image2.webp" alt="image2" />
+          <img src="./images/image3.webp" alt="image3" />
+          <img src="./images/image4.webp" alt="image4" />
+          <img src="./images/image5.webp" alt="image5" />
+          <img src="./images/image6.webp" alt="image6" />
+          <img src="./images/image7.webp" alt="image7" />
+          <img src="./images/image8.webp" alt="image8" />
+          <img src="./images/image9.webp" alt="image9" />
+        </div>
+        <div id="cart" class="section hidden" ></div>
+        <div id="about" class="section hidden" >
+          <h1>About Tech Store</h1>
+          <p>
+            Tech Store is your one-stop shop for all things tech. Founded in
+            2024, we've been at the forefront of bringing the latest gadgets to
+            tech enthusiasts.
+          </p>
+          <h2>Our Mission</h2>
+          <p>
+            To provide high-quality, innovative tech products at competitive
+            prices, coupled with exceptional customer service.
+          </p>
+        </div>
+        <div id="contact" class="section hidden" >
+          <h1>Contact Us</h1>
+          <p>Get in touch with us for any queries or support.</p>
+          <ul>
+            <li>Email: support@techgadgets.com</li>
+            <li>Phone: 0093 799 000 000</li>
+            <li>Address: 123 Tech Street, Herat City</li>
+          </ul>
+          <h2>Send us a message</h2>
+          <form onsubmit="event.preventDefault(); sendMessage();">
+            <label for="contactName">Your Name:</label>
+            <input type="text" id="contactName" required />
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" required />
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
-      <div id="gallary" class="section"></div>
-      <div id="cart" class="section"></div>
-      <div id="about" class="section"></div>
-      <div id="contact" class="section"></div>
-    </div>
 
       <footer>
         &copy; 2024 Tech Store. All rights reserved. By
