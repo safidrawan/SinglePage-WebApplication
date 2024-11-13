@@ -31,14 +31,16 @@ header {
     color: white;
     width: 100%;
     font-size: 1.3rem;
+    padding: 0 20px;
 
     a {
       color: #fff;
       padding: 10px;
       text-decoration: none;
       display: inline-block;
-      position: relative; 
-      border-radius: 5px;
+      position: relative;
+      border-radius: 3px;
+      transition: background 0.5s ease;
 
       &::after {
         content: "";
@@ -53,7 +55,7 @@ header {
       }
 
       &:hover::after {
-        width: calc(100% - 20px); 
+        width: calc(100% - 20px);
       }
     }
 
@@ -64,6 +66,23 @@ header {
       &:hover::after {
         background-color: #333;
         width: calc(100% - 20px);
+      }
+    }
+
+    #sym {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 15px;
+
+      span {
+        /* background-color: #69be61; */
+        display: inline-block;
+        position: absolute;
+        bottom: -20px;
+        left: -50%;
+        transform: rotateZ(180deg);
+        font-weight: bold;
       }
     }
   }
@@ -78,6 +97,10 @@ header {
   gap: 20px;
   width: 100%;
   align-items: baseline;
+}
+#cart {
+  display: flex;
+  align-items: center;
 }
 .product-cart {
   width: 300px;
@@ -174,4 +197,39 @@ footer {
   background-color: #69be61;
   box-shadow: 0 0 10px #ccc;
   display: none;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 100px;
+    margin-right: 15px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+}
+
+.quantity-control span {
+    margin: 0 10px;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
 }
