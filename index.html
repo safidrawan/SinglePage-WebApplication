@@ -12,14 +12,14 @@
       <header>
         <h1>Tech Store</h1>
         <nav>
-          <a href="#" onclick="showSection('home')">Home</a>
-          <a href="#" onclick="showSection('products')">Products</a>
-          <a href="#" onclick="showSection('gallary')">Gallary</a>
-          <a href="#" onclick="showSection('cart')"
+          <a href="#" id="homeLink" class="navLink current" onclick="showSection('home' ,'homeLink')">Home</a>
+          <a href="#" id="proLink" class="navLink " onclick="showSection('products','proLink')">Products</a>
+          <a href="#" id="galLink" class="navLink " onclick="showSection('gallary','galLink')">Gallary</a>
+          <a href="#" id="cartLink" class="navLink " onclick="showSection('cart','cartLink')"
             >Cart (<span id="cartCounter">0</span>)</a
           >
-          <a href="#" onclick="showSection('about')">About</a>
-          <a href="#" onclick="showSection('contact')">Contact</a>
+          <a href="#" id="aboutLink" class="navLink " onclick="showSection('about','aboutLink')">About</a>
+          <a href="#" id="conLink" class="navLink " onclick="showSection('contact','conLink')">Contact</a>
         </nav>
       </header>
       <div class="container">
@@ -65,7 +65,11 @@
           <img src="./images/image8.webp" alt="image8" />
           <img src="./images/image9.webp" alt="image9" />
         </div>
-        <div id="cart" class="section hidden"></div>
+        <div id="cart" class="section hidden">
+          <h1>Cart</h1>
+          <p>Your cart is empty.</p>
+          <a href="#" class="btn" onclick="showSection('products')"> Back to Products page</a>
+        </div>
         <div id="about" class="section hidden">
           <h1>About Tech Store</h1>
           <p>

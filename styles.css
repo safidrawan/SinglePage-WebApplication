@@ -22,7 +22,7 @@ header {
   align-items: center;
   margin-bottom: 20px;
 
-  h1{
+  h1 {
     padding: 20px;
   }
 
@@ -30,17 +30,45 @@ header {
     background-color: #333;
     color: white;
     width: 100%;
-    padding: 10px;
     font-size: 1.3rem;
 
     a {
       color: #fff;
+      padding: 10px;
       text-decoration: none;
-      margin: 20px;
+      display: inline-block;
+      position: relative; 
+      border-radius: 5px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: #f4f4f4;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      &:hover::after {
+        width: calc(100% - 20px); 
+      }
+    }
+
+    .current {
+      background-color: #f4f4f4;
+      color: #333;
+
+      &:hover::after {
+        background-color: #333;
+        width: calc(100% - 20px);
+      }
     }
   }
 }
-.container{
+.container {
   margin-bottom: 5vh;
 }
 
@@ -73,6 +101,12 @@ img {
   padding: 10px;
   font-size: 1.1rem;
   margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: #555;
 }
 #products {
   display: flex;
@@ -93,22 +127,21 @@ img {
   flex-direction: row;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   width: 50vw;
-  
-  input{
-    padding: 5px;
 
+  input {
+    padding: 5px;
   }
-  textarea{
+  textarea {
     min-height: 200px;
   }
 }
 
 footer {
-height: 5vh;
+  height: 5vh;
   position: absolute;
   bottom: 0;
   padding: 30px;
@@ -132,11 +165,11 @@ height: 5vh;
   display: flex !important;
 }
 
-#alert{
+#alert {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate( -50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 10px;
   background-color: #69be61;
   box-shadow: 0 0 10px #ccc;
