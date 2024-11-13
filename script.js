@@ -100,6 +100,12 @@ class Cart {
     const cartSection = document.getElementById("cart");
     cartSection.innerHTML = "<h1>Cart</h1>";
 
+    const totalCount = this.items.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCounter = document.getElementById("cartCounter");
+    if (cartCounter) {
+        cartCounter.textContent = totalCount; 
+    }
+
     if (this.items.length === 0) {
       cartSection.innerHTML += "<p>Your cart is empty.</p>";
       cartSection.innerHTML +=
@@ -141,9 +147,8 @@ class Cart {
           
       `;
     cartSection.appendChild(totalElement);
-  }
 }
-
+}
 const cart = new Cart();
 
 function setupProductEventListeners() {
